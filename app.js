@@ -8,7 +8,7 @@ const connection = mysql.createConnection(process.env.DATABASE_URL);
 
 connection.connect()
 
-app.get('/', (req, res) => {
+app.get('/users/', (req, res) => {
   connection.query('SELECT * FROM users', function (err, rows, fields) {
     if (err) throw err
 
